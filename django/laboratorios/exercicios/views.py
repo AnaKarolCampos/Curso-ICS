@@ -11,3 +11,13 @@ def ex1(request):
         'frase': frase
     }
     return render(request, 'ex1.html', data)
+
+def ex2(request):
+    subtotal = 100
+    taxas = 10
+    data = {
+        'titulo': 'Exercício 2. Olá Mundo',
+        'descricao_exercicio': 'Calculadora.',
+        'total': f'a soma do subtotal e taxas é {subtotal + taxas}',
+    }
+    return render(request, 'ex2.html', data)
