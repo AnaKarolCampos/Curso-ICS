@@ -20,3 +20,11 @@ def ex3(request):
         frase = f'Seu nome é {nome} e sua idade é {idade}'
         data['frase'] = frase
     return render (request, 'ex3.html', data)
+
+def ex4(request):
+    data = {}
+    if request.method == 'POST':
+        palavra = request.POST.get('palavra')
+        qtd = f'{len(palavra)}'
+        data['qtd'] = qtd
+    return render (request, 'ex4.html', data)

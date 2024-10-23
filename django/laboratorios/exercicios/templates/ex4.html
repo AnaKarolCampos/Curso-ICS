@@ -6,16 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercício 3</h1>
-    <p>Exiba seu nome e sua idade na tela</p>
+    <h1>Exercício 4</h1>
+    <p>Exibir quantas letras a palavra digitada tem</p>
     <form method="POST">
         {% csrf_token %}
-        <input type="text" name="nome">
-        <input type="text" name="idade">
+        Digite uma palavra: <input type="text" name="palavra">
         <button type="submit">Enviar</button>
     </form>
-    {% if frase %}
-        <h2>{{frase}}</h2>
+    {% if qtd %}
+        <h2>{{qtd}}</h2>
     {% endif %}
 </body>
 </html>
