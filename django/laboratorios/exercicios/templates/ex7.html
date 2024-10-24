@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 7</h1>
+    <p>Exibir o número somado a ele mesmo</p>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="number" name="num1">
+        <button type="submit">Enviar</button>
+    </form>
+    {% if total %}
+        <h2>Total: {{total}}</h2>
+    {% endif %}
+</body>
+</html>
