@@ -28,3 +28,15 @@ def ex4(request):
         qtd = f'{len(palavra)}'
         data['qtd'] = qtd
     return render (request, 'ex4.html', data)
+
+def ex5(request):
+    data = {}
+    if request.method == 'POST':
+        palavra1 = request.POST.get('palavra1')
+        palavra2 = request.POST.get('palavra2')
+        palavra3 = request.POST.get('palavra3')
+        palavra4 = request.POST.get('palavra4')
+        palavra5 = request.POST.get('palavra5')
+        frase = f'{palavra1} {palavra2} {palavra3} {palavra4} {palavra5}'
+        data['frase'] = frase
+    return render (request, 'ex5.html', data)

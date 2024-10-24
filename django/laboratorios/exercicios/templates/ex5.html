@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <p>Exibir as 5 palavras digitadas em uma só frase</p>
+    <form method="POST">
+        {% csrf_token %}
+        1: <input type="text" name="palavra1">
+        2: <input type="text" name="palavra2">
+        3: <input type="text" name="palavra3">
+        4: <input type="text" name="palavra4">
+        5: <input type="text" name="palavra5">
+        <button type="submit">Enviar</button>
+    </form>
+    {% if frase %}
+        <h2>{{frase}}</h2>
+    {% endif %}
+</body>
+</html>
