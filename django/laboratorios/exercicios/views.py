@@ -76,3 +76,11 @@ def ex10(request):
         total = int(num1) + int(num2)
         data['total'] = total
     return render (request, 'ex10.html', data)
+
+def ex11(request):
+    data = {}
+    if request.method == 'POST':
+        frase = request.POST.get('frase')
+        qtd = f'{len(frase)}'
+        data['qtd'] = qtd
+    return render (request, 'ex11.html', data)
