@@ -59,3 +59,19 @@ def ex8(request):
         total = int(num1) + 1
         data['total'] = total
     return render (request, 'ex8.html', data)
+
+def ex9(request):
+    data = {}
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        frase = f'Olá, {nome}!'
+        data['frase'] = frase
+    return render (request, 'ex9.html', data)
+
+def ex10(request):
+    data = {}
+    if request.method == 'POST':
+        nome = request.POST.get('nome')
+        frase = f'Olá, {nome}!'
+        data['frase'] = frase
+    return render (request, 'ex10.html', data)
