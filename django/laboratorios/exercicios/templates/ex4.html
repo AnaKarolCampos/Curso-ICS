@@ -11,10 +11,14 @@
     <form method="POST">
         {% csrf_token %}
         Digite uma palavra: <input type="text" name="palavra">
-        <button type="submit">Enviar</button>
+        <br>
+        <br>
+        <button type="submit">Calcular letras</button>
     </form>
     {% if qtd %}
         <h2>{{qtd}}</h2>
     {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Home</a>
 </body>
 </html>

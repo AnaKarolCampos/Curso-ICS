@@ -10,15 +10,19 @@
     <p>Exibir as 5 palavras digitadas em uma só frase</p>
     <form method="POST">
         {% csrf_token %}
-        1: <input type="text" name="palavra1">
-        2: <input type="text" name="palavra2">
-        3: <input type="text" name="palavra3">
-        4: <input type="text" name="palavra4">
-        5: <input type="text" name="palavra5">
-        <button type="submit">Enviar</button>
+        1: <input type="text" name="palavra1"> <br>
+        2: <input type="text" name="palavra2"> <br>
+        3: <input type="text" name="palavra3"> <br>
+        4: <input type="text" name="palavra4"> <br>
+        5: <input type="text" name="palavra5"> <br>
+        <br>
+        <br>
+        <button type="submit">Juntar frase</button>
     </form>
     {% if frase %}
         <h2>{{frase}}</h2>
     {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Home</a>
 </body>
 </html>

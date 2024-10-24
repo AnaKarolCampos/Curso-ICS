@@ -51,3 +51,11 @@ def ex7(request):
         total = int(num1) + int(num1)
         data['total'] = total
     return render (request, 'ex7.html', data)
+
+def ex8(request):
+    data = {}
+    if request.method == 'POST':
+        num1 = request.POST.get('num1')
+        total = int(num1) + 1
+        data['total'] = total
+    return render (request, 'ex8.html', data)

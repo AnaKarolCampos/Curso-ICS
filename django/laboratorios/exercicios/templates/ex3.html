@@ -10,12 +10,16 @@
     <p>Exiba seu nome e sua idade na tela</p>
     <form method="POST">
         {% csrf_token %}
-        <input type="text" name="nome">
-        <input type="text" name="idade">
+        <input type="text" name="nome"> <br>
+        <input type="text" name="idade"> <br>
+        <br>
+        <br>
         <button type="submit">Enviar</button>
     </form>
     {% if frase %}
         <h2>{{frase}}</h2>
     {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Home</a>
 </body>
 </html>

@@ -6,8 +6,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercício 7</h1>
-    <p>Exibir o número somado a ele mesmo</p>
+    <h1>Exercício 8</h1>
+    <p>Exibir o número somado a 1</p>
     <form method="POST">
         {% csrf_token %}
         <input type="number" name="num1">
@@ -16,5 +16,6 @@
     {% if total %}
         <h2>Total: {{total}}</h2>
     {% endif %}
+    <a href="{% url 'home' %}">Home</a>
 </body>
 </html>
