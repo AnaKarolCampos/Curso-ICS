@@ -6,18 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Exercício 14</h1>
-    <p>Troca de valores</p>
+    <h1>Exercício 15</h1>
+    <p>Exibir frase 3 vezes</p>
     <form method="POST">
         {% csrf_token %}
-        Valor de A: <input type="number" name="a"> <br>
-        Valor de B: <input type="number" name="b"> <br>
+        <input type="text" name="frase"> <br>
         <br>
         <br>
-        <button type="submit">Trocar</button>
+        <button type="submit">Enviar</button>
     </form>
-    {% if troca %}
-        <h2>{{troca}}</h2>
+    {% if frase %}
+        <h2>{{frase}}</h2>
+        <h2>{{frase}}</h2>
+        <h2>{{frase}}</h2>
     {% endif %}
     <br>
     <a href="{% url 'home' %}">Home</a>

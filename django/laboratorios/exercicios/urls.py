@@ -16,4 +16,5 @@ urlpatterns = [
     path('ex12/', views.ex12, name='ex12'),
     path('ex13/', views.ex13, name='ex13'),
     path('ex14/', views.ex14, name='ex14'),
+    path('ex15/', views.ex15, name='ex15'),
 ]

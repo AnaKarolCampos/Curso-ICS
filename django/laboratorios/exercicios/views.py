@@ -114,3 +114,10 @@ def ex14(request):
         troca = f'A: {a}. B: {b}'
         data['troca'] = troca
     return render (request, 'ex14.html', data)
+
+def ex15(request):
+    data = {}
+    if request.method == 'POST':
+        frase = request.POST.get('frase')
+        data['frase'] = frase
+    return render (request, 'ex15.html', data)
