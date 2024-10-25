@@ -93,3 +93,12 @@ def ex12(request):
         completo = f'{parte1}{parte2}'
         data['completo'] = completo
     return render (request, 'ex12.html', data)
+
+def ex13(request):
+    data = {}
+    if request.method == 'POST':
+        ano = request.POST.get('ano')
+        nascimento = request.POST.get('nascimento')
+        idade = int(ano) - int(nascimento)
+        data['idade'] = idade
+    return render (request, 'ex13.html', data)

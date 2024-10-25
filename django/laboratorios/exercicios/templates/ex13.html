@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 13</h1>
+    <p>Cálculo de idade</p>
+    <form method="POST">
+        {% csrf_token %}
+        Ano atual: <input type="number" name="ano"> <br>
+        Ano de nascimento: <input type="number" name="nascimento"> <br>
+        <br>
+        <br>
+        <button type="submit">Juntar partes</button>
+    </form>
+    {% if idade %}
+        <h2>Sua idade é {{idade}}</h2>
+    {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>
