@@ -102,3 +102,15 @@ def ex13(request):
         idade = int(ano) - int(nascimento)
         data['idade'] = idade
     return render (request, 'ex13.html', data)
+
+def ex14(request):
+    data = {}
+    if request.method == 'POST':
+        a = request.POST.get('a')
+        b = request.POST.get('b')
+        c = b
+        b = a
+        a = c
+        troca = f'A: {a}. B: {b}'
+        data['troca'] = troca
+    return render (request, 'ex14.html', data)
