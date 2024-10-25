@@ -84,3 +84,12 @@ def ex11(request):
         qtd = f'{len(frase)}'
         data['qtd'] = qtd
     return render (request, 'ex11.html', data)
+
+def ex12(request):
+    data = {}
+    if request.method == 'POST':
+        parte1 = request.POST.get('parte1')
+        parte2 = request.POST.get('parte2')
+        completo = f'{parte1}{parte2}'
+        data['completo'] = completo
+    return render (request, 'ex12.html', data)

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercício 12</h1>
+    <p>Exibir duas partes digitadas em uma só</p>
+    <form method="POST">
+        {% csrf_token %}
+        Parte 1: <input type="text" name="parte1"> <br>
+        Parte 2: <input type="text" name="parte2"> <br>
+        <br>
+        <br>
+        <button type="submit">Juntar partes</button>
+    </form>
+    {% if completo %}
+        <h2>{{completo}}</h2>
+    {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Home</a>
+</body>
+</html>
