@@ -142,3 +142,12 @@ def ex17(request):
         frase = f'{objeto} {cor}'
         data['frase'] = frase
     return render (request, 'ex17.html', data)
+
+def ex18(request):
+    data = {}
+    if request.method == 'POST':
+        cdd1 = request.POST.get('cdd1')
+        cdd2 = request.POST.get('cdd2')
+        frase = f'{cdd1} está a leste de {cdd2}'
+        data['frase'] = frase
+    return render (request, 'ex18.html', data)
