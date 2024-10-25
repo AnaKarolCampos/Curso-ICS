@@ -133,3 +133,12 @@ def ex16(request):
         media = soma / 4
         data['media'] = media
     return render (request, 'ex16.html', data)
+
+def ex17(request):
+    data = {}
+    if request.method == 'POST':
+        objeto = request.POST.get('objeto')
+        cor = request.POST.get('cor')
+        frase = f'{objeto} {cor}'
+        data['frase'] = frase
+    return render (request, 'ex17.html', data)
