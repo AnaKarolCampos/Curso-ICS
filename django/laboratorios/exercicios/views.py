@@ -121,3 +121,15 @@ def ex15(request):
         frase = request.POST.get('frase')
         data['frase'] = frase
     return render (request, 'ex15.html', data)
+
+def ex16(request):
+    data = {}
+    if request.method == 'POST':
+        num1 = request.POST.get('num1')
+        num2 = request.POST.get('num2')
+        num3 = request.POST.get('num3')
+        num4 = request.POST.get('num4')
+        soma = int(num1) + int(num2) + int(num3) + int(num4)
+        media = soma / 4
+        data['media'] = media
+    return render (request, 'ex16.html', data)
